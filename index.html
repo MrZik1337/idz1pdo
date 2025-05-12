@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Пошук інформації про медсестер та палати</title>
+</head>
+<body>
+
+    <h1>Пошук у базі даних лікарні</h1>
+
+    <h2>Знайти палати для медсестри</h2>
+    <form action="search.php" method="post">
+        Ім'я медсестри: <input type="text" name="nurse_name"><br><br>
+        <input type="hidden" name="query_type" value="wards_by_nurse">
+        <input type="submit" value="Знайти палати">
+    </form>
+
+    <hr>
+
+    <h2>Знайти медсестер за відділенням</h2>
+    <form action="search.php" method="post">
+        Назва відділення: <input type="text" name="department_name"><br><br>
+         <input type="hidden" name="query_type" value="nurses_by_department">
+        <input type="submit" value="Знайти медсестер">
+    </form>
+
+     <hr>
+
+    <h2>Знайти чергування за зміною</h2>
+    <form action="search.php" method="post">
+        Зміна (First, Second, Third): <input type="text" name="shift_name"><br><br>
+        <input type="hidden" name="query_type" value="duties_by_shift">
+        <input type="submit" value="Знайти чергування">
+    </form>
+
+</body>
+</html>
